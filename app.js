@@ -16,7 +16,7 @@ mongoose.connect('mongodb://127.0.0.1/crud-mongo-blog',{ //esto es el servidor l
 
 
 // importing routes
-const indexRoutes = require('./routes/routeindex');
+const indexRoutes = require('./routes/routeindex'); // lo que hace es ligarlo a index routes
 //
 let blog = require("./model/task"); //esta es la ruta que trae al modelo ya creado
 const { Date } = require('mongoose');
@@ -43,7 +43,7 @@ app.set('view engine', 'ejs');
 
 // middlewares
 app.use(morgan('dev'));
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({extended:false})); //esto se agrega si la info viene de un formulario
 
 
 // routes

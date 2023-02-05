@@ -1,6 +1,6 @@
 const { render } = require('ejs');
 const express = require('express');
-const router = express.Router();
+const router = express.Router(); //define lo que lo hace router
 //const Task = require('../model/task');
 
 
@@ -15,4 +15,4 @@ router.get('/newPost', async (req,res) =>{
 
 
 
-module.exports = router;
+module.exports = router; // esto importa a app
