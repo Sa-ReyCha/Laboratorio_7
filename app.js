@@ -23,6 +23,9 @@ const { Date } = require('mongoose');
 
 
 // Voy a trabajar con blog
+
+// esto era una prueba hacia la bd
+/*
 let Blog = new blog({
     title: "PRUEBA_4", //esto tiene que ver con lo que defines de las propiedades del emlemento
     author: "PRUEBA_4",
@@ -32,7 +35,7 @@ let Blog = new blog({
     
     Blog.save()
 
-
+*/
 
 
 

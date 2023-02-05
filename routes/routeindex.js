@@ -5,7 +5,7 @@ const Task = require('../model/task'); // esto se trae el task original de model
 
 
 router.get('/', async function(req,res){
-  let tasks = await Task.find()
+  let tasks = await Task.find(); //consulta a DB para recuperar las tareas
   console.log(tasks);
   res.render('index', {tasks});
 });

@@ -19,6 +19,17 @@
         <a class = "btn btn-info" href =""> Edit </a>
       </div>
 
+      <!--Empieza dinamico-->
+      <% for (let i = 0; i<tasks.length; i++) { %>
+        <div class="blog-post">
+          <h2 class="blog-post-title">    <%= tasks[i].title %>    </h2>
+          <p class="blog-post-meta"> <%= tasks[i].post_date %> <a href="#">Mark</a>     </p>
+          <p> <%= tasks[i].post_data %>  </p>
+          <a class = "btn btn-danger" href =""> Delete </a>
+          <a class = "btn btn-info" href =""> Edit </a>
+        </div> 
+      <% } %> 
+      <!--Termina dinamico-->
 
 
     </div>
