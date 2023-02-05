@@ -24,8 +24,32 @@ router .post('/newPost', async function(req,res){ // el async lo que hace es esp
 
   
   res.redirect("/") //regresa a casa
-
 })
 
+// eliminar viejos blogs
+router .get('/delete/:id', async function(req,res){
+  let id = req.params.id
+  await Task.remove({_id:id})
+  res.redirect("/")
+})
+
+
+
+// editar viejos blogs
+
+//lectura
+router.get("/edit/:id", async function(req,res){
+
+  let id = req.params.id    
+  let task = await Task.findById(id)
+  res.render("edit",{task})    
+  })
+
+//post
+router.post('/edit/:id', async function(req,res){
+  let id = req.params.id
+  await Task.updateOne({_id:id}, req.body)
+  res.redirect("/")
+})
 
 module.exports = router; // esto importa a app
